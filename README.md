@@ -1,9 +1,8 @@
-Autonomous and Localization TurtleBot4
+#Autonomous and Localization TurtleBot4
 Lokalisasi dan Pemetaan — RE702 Midterm Exam
-
 42222201044 — Abdi Wijaya Sasmita (RE 7B Pagi)
 
-Deskripsi
+##Deskripsi
 
 Repositori ini digunakan untuk memenuhi Ujian Tengah Semester mata kuliah Lokalisasi dan Pemetaan (RE702).
 Paket ROS2 di dalamnya menjalankan:
@@ -35,7 +34,7 @@ Lakukan SSH sebelum menjalankan perintah:
 
 ssh ubuntu@192.168.185.3
 
-Menjalankan Sistem
+###Menjalankan Sistem
 1. Localization
 
 Pada terminal TurtleBot4:
@@ -57,23 +56,23 @@ ros2 launch turtlebot4_viz view_navigation.launch.py
 
 Pastikan posisi robot di RViz sesuai posisi fisik di lapangan.
 
-Build ROS2 Workspace
+###Build ROS2 Workspace
 Membuat workspace
 mkdir -p ros2_ws/src
 cd ros2_ws/src
 
-Clone repository
+###Clone repository
 git clone https://github.com/AbdiWijaya02/UTS-RE702---Turtlebot4.git
 
-Build workspace
+###Build workspace
 cd ../
 colcon build
 source install/setup.bash
 
-Menjalankan Node Utama
+###Menjalankan Node Utama
 ros2 run abdi_pkg abdinode
 
-Demo
+###Demo
 
 Video demonstrasi tersedia pada tautan berikut:
 (tambahkan link video di sini)
