@@ -1,6 +1,6 @@
 # Autonomous-and-Localization-Turtlebot-4
 Lokalisasi dan Pemetaan/RE702 Midterm Exam
-42222201014 Muhammad Ribfli RE 7 A Pagi
+42222201044 Abdi Wijaya Sasmita RE 7B Pagi
 
 # RE702 Midterm Localization & Mapping
 Repositori ini dibuat sebagai bagian dari pengerjaan asesmen tengah semester mata kuliah Lokalisasi dan Pemetaan (RE702). Package ROS2 ini bertujuan untuk menggerakkan TurtleBot4 dari satu posisi ke posisi lain serta mengaktifkan buzzer, sesuai instruksi asesmen.
