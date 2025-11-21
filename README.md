@@ -1,68 +1,79 @@
-Autonomous-and-Localization-Turtlebot-4
-
+Autonomous and Localization TurtleBot4
 Lokalisasi dan Pemetaan — RE702 Midterm Exam
-42222201044 Abdi Wijaya Sasmita — RE 7B Pagi
+
+42222201044 — Abdi Wijaya Sasmita (RE 7B Pagi)
 
 Deskripsi
 
-Repositori ini merupakan bagian dari pengerjaan ujian tengah semester mata kuliah Lokalisasi dan Pemetaan/RE702. Paket ROS2 yang disertakan berfungsi untuk mengarahkan TurtleBot4 bergerak dari satu titik ke titik lain serta mengaktifkan buzzer sesuai instruksi asesmen.
+Repositori ini digunakan untuk memenuhi Ujian Tengah Semester mata kuliah Lokalisasi dan Pemetaan (RE702).
+Paket ROS2 di dalamnya menjalankan:
 
-Persiapan
+Localization TurtleBot4
 
-Sebelum melakukan build dan menjalankan paket ini, pastikan Anda telah membuat peta (map) untuk lingkungan yang digunakan.
-Peta disimpan di direktori maps/.
+Navigation (Nav2)
 
-Panduan pembuatan peta TurtleBot4 dapat dilihat pada dokumentasi resmi:
+Pergerakan robot menuju titik tujuan
+
+Aktivasi buzzer sesuai instruksi asesmen
+
+Persiapan Awal
+1. Pembuatan Peta
+
+Pastikan Anda sudah membuat map untuk lingkungan pengujian.
+Simpan peta pada direktori:
+
+maps/
+
+Panduan pembuatan peta resmi:
 https://turtlebot.github.io/turtlebot4-user-manual/tutorials/generate_map.html
 
-Pastikan laptop/PC berada pada jaringan yang sama dengan TurtleBot4, kemudian lakukan SSH ke robot sebelum menjalankan perintah.
+2. Koneksi ke Robot
 
-1. Menjalankan Localization & Navigation
+Laptop/PC dan TurtleBot4 harus satu jaringan Wi-Fi
 
-Pada terminal TurtleBot4, jalankan:
+Lakukan SSH sebelum menjalankan perintah:
+
+ssh ubuntu@192.168.185.3
+
+Menjalankan Sistem
+1. Localization
+
+Pada terminal TurtleBot4:
 
 ros2 launch turtlebot4_navigation localization.launch.py map:=path/ke/map.yaml
 
-Pastikan path menuju map.yaml sudah benar.
+2. Navigation (Nav2)
 
-2. Menjalankan Nav2 (di robot)
-
-Buka terminal kedua di TurtleBot4 dan jalankan:
+Terminal kedua:
 
 ros2 launch turtlebot4_navigation nav2.launch.py
 
-3. Menjalankan RViz2 (di laptop/PC)
+3. Menampilkan RViz2
 
-Pada terminal laptop/PC yang terhubung ke robot:
+Pada laptop/PC:
 
 ros2 launch turtlebot4_viz view_navigation.launch.py
 
 
-Pastikan pose robot di RViz sesuai dengan posisi fisiknya di lapangan.
+Pastikan posisi robot di RViz sesuai posisi fisik di lapangan.
 
-Build Package
-
-Buat workspace:
-
+Build ROS2 Workspace
+Membuat workspace
 mkdir -p ros2_ws/src
 cd ros2_ws/src
 
-
-Clone repository:
-
+Clone repository
 git clone https://github.com/AbdiWijaya02/UTS-RE702---Turtlebot4.git
 
-
-Build workspace:
-
+Build workspace
 cd ../
 colcon build
 source install/setup.bash
 
-
-Menjalankan program utama:
-
-ros2 run abdi_pkg abdinode 
+Menjalankan Node Utama
+ros2 run abdi_pkg abdinode
 
 Demo
-Video demonstrasi dapat dilihat pada tautan berikut:
+
+Video demonstrasi tersedia pada tautan berikut:
+(tambahkan link video di sini)
