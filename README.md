@@ -1,67 +1,68 @@
-# Autonomous-and-Localization-Turtlebot-4
-Lokalisasi dan Pemetaan/RE702 Midterm Exam
-42222201044 Abdi Wijaya Sasmita RE 7B Pagi
+Autonomous-and-Localization-Turtlebot-4
 
-# RE702 Midterm Localization & Mapping
-Repositori ini dibuat sebagai bagian dari pengerjaan asesmen tengah semester mata kuliah Lokalisasi dan Pemetaan (RE702). Package ROS2 ini bertujuan untuk menggerakkan TurtleBot4 dari satu posisi ke posisi lain serta mengaktifkan buzzer, sesuai instruksi asesmen.
+Lokalisasi dan Pemetaan — RE702 Midterm Exam
+42222201044 Abdi Wijaya Sasmita — RE 7B Pagi
 
-## Persiapan Sebelum Menjalankan Package
-Sebelum melakukan build dan menjalankan package ROS2 ini, pastikan Anda telah menghasilkan peta map sesuai dengan environment yang digunakan.
-Peta hasil mapping disimpan pada folder maps/. Untuk membuat peta baru, Dapat mengikuti dokumentasi TurtleBot4:
+Deskripsi
 
+Repositori ini merupakan bagian dari pengerjaan ujian tengah semester mata kuliah Lokalisasi dan Pemetaan/RE702. Paket ROS2 yang disertakan berfungsi untuk mengarahkan TurtleBot4 bergerak dari satu titik ke titik lain serta mengaktifkan buzzer sesuai instruksi asesmen.
+
+Persiapan
+
+Sebelum melakukan build dan menjalankan paket ini, pastikan Anda telah membuat peta (map) untuk lingkungan yang digunakan.
+Peta disimpan di direktori maps/.
+
+Panduan pembuatan peta TurtleBot4 dapat dilihat pada dokumentasi resmi:
 https://turtlebot.github.io/turtlebot4-user-manual/tutorials/generate_map.html
 
-Pastikan perangkat (laptop/PC) telah terhubung ke LAN atau WiFi yang sama dengan TurtleBot4, kemudian lakukan SSH ke robot.
+Pastikan laptop/PC berada pada jaringan yang sama dengan TurtleBot4, kemudian lakukan SSH ke robot sebelum menjalankan perintah.
 
-## 1. Running Localization & Navigation
-Di terminal TurtleBot4, jalankan:
-```bash
+1. Menjalankan Localization & Navigation
+
+Pada terminal TurtleBot4, jalankan:
+
 ros2 launch turtlebot4_navigation localization.launch.py map:=path/ke/map.yaml
-```
-> Pastikan path/ke/map.yaml diganti dengan path file map yang benar.
 
-## 2. Jalankan Nav2 (di robot TurtleBot4)
-Di terminal TurtleBot4 lainnya, jalankan:
-```bash
+Pastikan path menuju map.yaml sudah benar.
+
+2. Menjalankan Nav2 (di robot)
+
+Buka terminal kedua di TurtleBot4 dan jalankan:
+
 ros2 launch turtlebot4_navigation nav2.launch.py
-```
-## 3. Jalankan visualisasi RViz2 (di laptop/PC)
-Pada terminal laptop/PC yang terhubung dengan TurtleBot4, jalankan:
-```bash
+
+3. Menjalankan RViz2 (di laptop/PC)
+
+Pada terminal laptop/PC yang terhubung ke robot:
+
 ros2 launch turtlebot4_viz view_navigation.launch.py
-```
-> Pastikan pose robot di RViz sesuai dengan posisi fisik di lapangan.
 
----
 
-## Build Package dari Repository Ini
+Pastikan pose robot di RViz sesuai dengan posisi fisiknya di lapangan.
+
+Build Package
 
 Buat workspace:
-```bash
+
 mkdir -p ros2_ws/src
 cd ros2_ws/src
-```
+
 
 Clone repository:
-```bash
-git clone https://github.com/RIBFLI/Autonomous-and-Localization-Turtlebot-4.git
-```
+
+git clone https://github.com/AbdiWijaya02/UTS-RE702---Turtlebot4.git
+
 
 Build workspace:
-```bash
+
 cd ../
 colcon build
 source install/setup.bash
-```
 
-Menjalankan program:
-```bash
-ros2 run re702_midterm_localization_mapping navigation
-```
 
----
+Menjalankan program utama:
 
-##  Demo
+ros2 run abdi_pkg abdinode 
 
-Video demonstrasi dapat dilihat di:
-https://youtu.be/0ICtoX1--R0
+Demo
+Video demonstrasi dapat dilihat pada tautan berikut:
