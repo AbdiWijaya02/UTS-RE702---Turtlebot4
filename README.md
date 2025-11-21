@@ -85,4 +85,4 @@ ros2 run abdi_pkg abdinode
 ---
 
 ## Demo
-*(Tambahkan link video demo di sini)*
+https://youtu.be/b6Jc3NDo4qI?si=2fu2QRdHfdBD7QBC
